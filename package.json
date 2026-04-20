@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ts-node ./src/app.ts -b 10 -s",
     "dev:nodemon": "nodemon -b 7",
-    "build": "rimraf ./dist && tsc",
+    "build": "rimraf ./dist && tsc -p tsconfig.build.json",
     "start": "npm run build && node dist/app.js",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -30,6 +30,6 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "yargs": "^18.0.0"
+    "yargs": "^17.7.2"
   }
 }
